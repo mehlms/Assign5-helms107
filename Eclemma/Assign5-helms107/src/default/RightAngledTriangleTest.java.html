@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>RightAngledTriangleTest.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TriangleTest (Apr 25, 2016 12:10:33 AM)</a> &gt; <a href="../../index.html" class="el_group">Assign5-helms107</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">RightAngledTriangleTest.java</span></div><h1>RightAngledTriangleTest.java</h1><pre class="source lang-java linenums">import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+<span class="fc" id="L5">public class RightAngledTriangleTest {</span>
+
+	@Test
+	public void test() throws Exception {
+<span class="fc" id="L9">		RightAngledTriangle tri = new RightAngledTriangle(3.0, 4.0, 5.0);</span>
+<span class="fc" id="L10">		Double test = Math.round(tri.getArea() * 10) / 10.0;</span>
+<span class="fc" id="L11">		System.out.println(test);</span>
+<span class="fc" id="L12">		Double result = 6.0;</span>
+<span class="fc" id="L13">		assertEquals(result, test);</span>
+<span class="fc" id="L14">	}</span>
+	
+	@Test
+	public void testFailInit() {
+		try {
+<span class="nc" id="L19">			RightAngledTriangle tri = new RightAngledTriangle(3.0, 4.0, 6.0);</span>
+<span class="pc" id="L20">		} catch (Exception e) {</span>
+<span class="fc" id="L21">			System.out.println(&quot;error caught&quot;);</span>
+		}
+<span class="fc" id="L23">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>TriangleTest (Apr 25, 2016 12:10:33 AM)</div></body></html>

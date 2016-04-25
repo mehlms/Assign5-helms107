@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>Triangle.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TriangleTest (Apr 25, 2016 12:10:33 AM)</a> &gt; <a href="../../index.html" class="el_group">Assign5-helms107</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Triangle.java</span></div><h1>Triangle.java</h1><pre class="source lang-java linenums">/**
+ * SE320- Individual Assignment 5
+ * 
+ * Represents a Triangle
+ * @author Dr. Donyina
+ * @author Matthew Helms
+ */
+public class Triangle {
+    protected double sideA;
+    protected double sideB;
+    protected double sideC;
+
+    /**
+     * @param sideA
+     * @param sideB
+     * @param sideC
+     * @throws Exception
+     */
+<span class="fc" id="L19">    Triangle(double sideA, double sideB, double sideC) throws Exception {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (!validateInput(sideA, sideB, sideC)) {</span>
+<span class="fc" id="L21">            throw new Exception(&quot;Invalid Inputs&quot;);</span>
+        }
+
+<span class="fc" id="L24">        this.sideA = sideA;</span>
+<span class="fc" id="L25">        this.sideB = sideB;</span>
+<span class="fc" id="L26">        this.sideC = sideC;</span>
+<span class="fc" id="L27">    }</span>
+
+    /**
+     * @param sideA
+     * @param sideB
+     * @param sideC
+     * @return
+     */
+    public boolean validateInput(double sideA, double sideB, double sideC) {
+<span class="pc bpc" id="L36" title="2 of 6 branches missed.">       if (sideA &gt; 0 &amp;&amp; sideB &gt; 0 &amp;&amp; sideC &gt; 0){</span>
+<span class="fc" id="L37">           return true;</span>
+       }
+<span class="fc" id="L39">       return false;</span>
+    }
+   
+    /**
+     * @return
+     */
+    public double getSideA() {
+<span class="fc" id="L46">        return this.sideA;</span>
+    }
+    
+ 
+    /**
+     * @return
+     */
+    public double getSideB() {
+<span class="fc" id="L54">        return this.sideB;</span>
+    }
+    
+   
+    /**
+     * @return
+     */
+    public double getSideC() {
+<span class="fc" id="L62">        return this.sideC;</span>
+    }
+    
+ 
+    /**
+     * @return
+     */
+    public double getPerimeter() {
+<span class="fc" id="L70">        return sideA + sideB + sideC;</span>
+    }
+    
+  
+    /**
+     * @return
+     */
+    public double getArea() {
+<span class="fc" id="L78">        double p = getPerimeter()/2;</span>
+<span class="fc" id="L79">        return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>TriangleTest (Apr 25, 2016 12:10:33 AM)</div></body></html>
